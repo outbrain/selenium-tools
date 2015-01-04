@@ -1,0 +1,93 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <name>webDriver-log4j-appender</name>
+  <groupId>com.outbrain.selenium.tools</groupId>
+  <artifactId>webDriver-log4j-appender</artifactId>
+  <!--<packaging>jar</packaging>-->
+
+  <version>0.1-SNAPSHOT</version>
+
+  <description>Web Driver Log4jAppender</description>
+  <url>https://github.com/outbrain/Aletheia/wiki</url>
+  <licenses>
+    <license>
+      <name>Apache License Version 2.0, January 2004</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <scm>
+    <connection>scm:git:ssh://github.com:outbrain/Aletheia.git</connection>
+    <developerConnection>scm:git:ssh://github.com:outbrain/Aletheia.git</developerConnection>
+    <url>https://github.com/outbrain/Aletheia/</url>
+  </scm>
+
+  <organization>
+    <name>Outbrain</name>
+    <url>http://www.outbrain.com</url>
+  </organization>
+
+  <build>
+
+
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>net.alchim31.maven</groupId>
+          <artifactId>scala-maven-plugin</artifactId>
+          <version>3.1.6</version>
+          <executions>
+            <execution>
+              <id>scala-compile-first</id>
+              <phase>process-resources</phase>
+              <goals>
+                <goal>add-source</goal>
+                <goal>compile</goal>
+              </goals>
+            </execution>
+            <execution>
+              <id>scala-test-compile</id>
+              <phase>process-test-resources</phase>
+              <goals>
+                <goal>testCompile</goal>
+              </goals>
+            </execution>
+          </executions>
+          <configuration>
+            <recompileMode>incremental</recompileMode>
+            <useZincServer>true</useZincServer>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+
+    <plugins>
+      <plugin>
+        <groupId>net.alchim31.maven</groupId>
+        <artifactId>scala-maven-plugin</artifactId>
+      </plugin>
+    </plugins>
+
+
+  </build>
+  <dependencies>
+    <dependency>
+      <groupId>org.seleniumhq.selenium</groupId>
+      <artifactId>selenium-java</artifactId>
+      <version>2.43.1</version>
+    </dependency>
+    <dependency>
+      <groupId>log4j</groupId>
+      <artifactId>log4j</artifactId>
+      <version>1.2.17</version>
+    </dependency>
+    <dependency>
+      <groupId>org.scala-lang</groupId>
+      <artifactId>scala-library</artifactId>
+      <version>2.10.2</version>
+    </dependency>
+  </dependencies>
+</project>
