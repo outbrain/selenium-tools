@@ -5,7 +5,7 @@
   <name>webDriver-log4j-appender</name>
   <groupId>com.outbrain.selenium.tools</groupId>
   <artifactId>webDriver-log4j-appender</artifactId>
-  <!--<packaging>jar</packaging>-->
+  <packaging>jar</packaging>
 
   <version>0.1-SNAPSHOT</version>
 
@@ -20,9 +20,9 @@
   </licenses>
 
   <scm>
-    <connection>scm:git:ssh://github.com:outbrain/Aletheia.git</connection>
-    <developerConnection>scm:git:ssh://github.com:outbrain/Aletheia.git</developerConnection>
-    <url>https://github.com/outbrain/Aletheia/</url>
+    <connection>scm:git:ssh://github.com:outbrain/selenium-tools.git</connection>
+    <developerConnection>scm:git:ssh://github.com:outbrain/selenium-tools.git</developerConnection>
+    <url>https://github.com/outbrain/selenium-tools/</url>
   </scm>
 
   <organization>
@@ -31,8 +31,6 @@
   </organization>
 
   <build>
-
-
     <pluginManagement>
       <plugins>
         <plugin>
