@@ -42,3 +42,17 @@ log.info("clicking on the button");
 now image that all these message would appear in the browser console and will
 be part of the video.
 
+## Install
+
+### maven
+
+```xml
+  <repositories>
+    <repository>
+      <id>central</id>
+      <name>bintray</name>
+      <url>http://dl.bintray.com/yonatanm/maven</url>
+    </repository>
+  </repositories>
+```
+
