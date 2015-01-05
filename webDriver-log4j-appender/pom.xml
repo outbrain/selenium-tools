@@ -10,10 +10,10 @@
   <parent>
     <groupId>com.outbrain.selenium-tools</groupId>
     <artifactId>selenium-tools</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.1</version>
   </parent>
 
-  <version>0.1-SNAPSHOT</version>
+  <version>0.1</version>
 
 
   <description>Web Driver Log4jAppender</description>
@@ -43,9 +43,20 @@
         <groupId>net.alchim31.maven</groupId>
         <artifactId>scala-maven-plugin</artifactId>
       </plugin>
+
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
+        <artifactId>maven-source-plugin</artifactId>
+        <version>2.4</version>
+        <executions>
+          <execution>
+            <id>attach-sources</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>jar-no-fork</goal>
+            </goals>
+          </execution>
+        </executions>
       </plugin>
 
     </plugins>

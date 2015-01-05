@@ -8,7 +8,7 @@
   <name>selenium-tools</name>
   <groupId>com.outbrain.selenium-tools</groupId>
   <artifactId>selenium-tools</artifactId>
-  <version>0.1-SNAPSHOT</version>
+  <version>0.1</version>
   <description>The Selenium tools</description>
   <url>https://github.com/outbrain/selenium-tools/wiki</url>
   <licenses>
@@ -32,7 +32,6 @@
     <url>http://www.outbrain.com</url>
   </organization>
 
-  
 
   <modules>
     <module>webDriver-log4j-appender</module>
@@ -81,6 +80,12 @@
             <useZincServer>true</useZincServer>
           </configuration>
         </plugin>
+
+
+
+
+
+
       </plugins>
     </pluginManagement>
   </build>
