@@ -20,6 +20,9 @@ efficient we have built the WebDriver log4j Appener.
 in your code you simply write log messages before / after critical points as
 you probably do anyway
 
+```java
+
+
 Logger log = LoggerFactory.getLogger(MyClass)
 ....
 
@@ -27,7 +30,7 @@ log.info("waiting for spinner to show");
 log.info("waiting for spinner to hide");
 log.info("waiting for button to be enabled");
 log.info("clicking onm the button");
-
+```
 
 now image that all these message would appear in the browser console and will
 be part of the video.
