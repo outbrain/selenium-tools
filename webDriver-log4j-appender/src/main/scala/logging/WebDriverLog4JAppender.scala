@@ -4,21 +4,17 @@ import org.apache.log4j.{Appender, Logger, AppenderSkeleton, Level}
 import org.apache.log4j.spi.LoggingEvent
 import org.openqa.selenium.{TimeoutException, JavascriptExecutor}
 import java.util.Enumeration
+import scala.collection.JavaConverters._
 
 object OutbrainSeleniumLogging {
   def apply(webDriver: JavascriptExecutor) = setWebDriver(webDriver)
+
   def quit() = setWebDriver(null)
 
   private def setWebDriver(webDriver: JavascriptExecutor) {
-    val appenders: Enumeration[_] = Logger.getRootLogger.getAllAppenders
-    while (appenders.hasMoreElements) {
-      val appender: Appender = appenders.nextElement.asInstanceOf[Appender]
-      if (appender.isInstanceOf[WebDriverLog4JAppender]) {
-        (appender.asInstanceOf[WebDriverLog4JAppender]).setWebDriver(webDriver)
-      }
-    }
+    Logger.getRootLogger.getAllAppenders.asInstanceOf[Enumeration[Appender]].asScala.
+      filter(_.isInstanceOf[WebDriverLog4JAppender]).foreach(_.asInstanceOf[WebDriverLog4JAppender].setWebDriver(webDriver))
   }
-
 }
 
 class WebDriverLog4JAppender extends AppenderSkeleton {
