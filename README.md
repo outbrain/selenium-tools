@@ -16,7 +16,7 @@ are in the test's log, which bring us back to Jenkins.
 In order to make this process more
 efficient we have built the WebDriver log4j Appener.
 
-## How does it work?
+## How to use it
 in your code you simply write log messages before / after critical points as
 you probably do anyway
 
@@ -39,6 +39,38 @@ log.info("clicking on the button");
 
 ```
 
+## Demo - How it works
+[![See how it works](/selenium-tools-examples/images/webdriver-log4j-appender.png)](http://www.youtube.com/watch?v=G1yvX64Rke0)
+
 now image that all these message would appear in the browser console and will
 be part of the video.
 
+## Install
+
+### maven
+#### add bintray to your maven's repositories list just put it in your pom.xml
+
+```xml
+  <repositories>
+    <repository>
+      <id>central</id>
+      <name>bintray</name>
+      <url>http://dl.bintray.com/yonatanm/maven</url>
+    </repository>
+  </repositories>
+```
+#### add the webDriver Log4J appender artifact as your dependency
+```xml
+	<dependencies>
+		...
+		<dependency>
+			<groupId>com.outbrain.selenium-tools</groupId>
+			<artifactId>webDriver-log4j-appender</artifactId>
+			<version>1.0</version>
+		</dependency>
+		...
+	</dependencies>
+```
+
+### Directly 
+simply download from [bintray](https://bintray.com/yonatanm/maven/selenium-tools/)

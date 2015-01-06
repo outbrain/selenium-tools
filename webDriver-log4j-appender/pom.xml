@@ -3,9 +3,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <name>webDriver-log4j-appender</name>
-
   <artifactId>webDriver-log4j-appender</artifactId>
   <packaging>jar</packaging>
+  <version>0.1</version>
 
   <parent>
     <groupId>com.outbrain.selenium-tools</groupId>
@@ -13,7 +13,7 @@
     <version>0.1</version>
   </parent>
 
-  <version>0.1</version>
+
 
 
   <description>Web Driver Log4jAppender</description>
@@ -58,7 +58,6 @@
           </execution>
         </executions>
       </plugin>
-
     </plugins>
 
 
@@ -67,17 +66,14 @@
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
-      <version>2.43.1</version>
     </dependency>
     <dependency>
       <groupId>log4j</groupId>
       <artifactId>log4j</artifactId>
-      <version>1.2.17</version>
     </dependency>
     <dependency>
       <groupId>org.scala-lang</groupId>
       <artifactId>scala-library</artifactId>
-      <version>2.10.2</version>
     </dependency>
   </dependencies>
 </project>
