@@ -40,7 +40,7 @@ log.info("clicking on the button");
 ```
 
 ## Demo - How it works
-[![See how it works](http://img.youtube.com/vi/G1yvX64Rke0/0.jpg)](http://www.youtube.com/watch?v=G1yvX64Rke0)
+[![See how it works](/selenium-tools-examples/images/webdriver-log4j-appender.png)](http://www.youtube.com/watch?v=G1yvX64Rke0)
 
 now image that all these message would appear in the browser console and will
 be part of the video.
