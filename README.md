@@ -59,7 +59,7 @@ be part of the video.
     </repository>
   </repositories>
 ```
-#### add the webDriver Log4J appender artifat as your dependency
+#### add the webDriver Log4J appender artifact as your dependency
 ```xml
 	<dependencies>
 		...

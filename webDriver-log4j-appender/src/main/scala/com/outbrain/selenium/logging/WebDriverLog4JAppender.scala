@@ -1,29 +1,23 @@
 package com.outbrain.selenium.logging
 
-import org.apache.log4j.{Appender, Logger, AppenderSkeleton, Level}
+import org.apache.log4j.{AppenderSkeleton, Level}
 import org.apache.log4j.spi.LoggingEvent
 import org.openqa.selenium.{TimeoutException, JavascriptExecutor}
-import java.util.Enumeration
-import scala.collection.JavaConverters._
+import OutbrainSeleniumLogging._
 
 object OutbrainSeleniumLogging {
+  var webDriver: Option[JavascriptExecutor] = None
+
   def apply(webDriver: JavascriptExecutor) = setWebDriver(webDriver)
 
   def quit() = setWebDriver(null)
 
   private def setWebDriver(webDriver: JavascriptExecutor) {
-    Logger.getRootLogger.getAllAppenders.asInstanceOf[Enumeration[Appender]].asScala.
-      filter(_.isInstanceOf[WebDriverLog4JAppender]).foreach(_.asInstanceOf[WebDriverLog4JAppender].setWebDriver(webDriver))
+    OutbrainSeleniumLogging.webDriver = Option(webDriver);
   }
 }
 
 class WebDriverLog4JAppender extends AppenderSkeleton {
-
-  var webDriver: Option[JavascriptExecutor] = None
-
-  def setWebDriver(webDriver: JavascriptExecutor) = {
-    this.webDriver = Option(webDriver)
-  }
 
   protected def append(event: LoggingEvent) {
     webDriver.foreach(driver => {

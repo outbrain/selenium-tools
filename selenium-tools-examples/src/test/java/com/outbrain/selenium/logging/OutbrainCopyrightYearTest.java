@@ -18,7 +18,7 @@ import java.util.concurrent.TimeUnit;
 public class OutbrainCopyrightYearTest {
 
   private static org.slf4j.Logger logger = org.slf4j.LoggerFactory.getLogger(OutbrainCopyrightYearTest.class);
-  private WebDriver webdriver;
+  private volatile WebDriver webdriver;
   private static int THIS_YEAR = new DateTime().getYear();
 
   @Before
