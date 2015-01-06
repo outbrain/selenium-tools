@@ -45,6 +45,7 @@ be part of the video.
 ## Install
 
 ### maven
+just put it in your pom
 
 ```xml
   <repositories>
