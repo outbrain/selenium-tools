@@ -72,3 +72,5 @@ be part of the video.
 	</dependencies>
 ```
 
+### Directly 
+simply download from [bintray](https://bintray.com/yonatanm/maven/selenium-tools/)
